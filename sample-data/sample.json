@@ -1,0 +1,20 @@
+[
+    {
+        "NodeId": "ns=2;s=Number\\a307ae59-8a3b-44aa",
+        "Value": 973.021,
+        "SourceTimestamp": "2020-11-30T07:21:31.2604024Z",
+        "StatusCode": 0
+    },
+    {
+        "NodeId": "ns=2;s=Boolean\\bc52f49b-c7e1-455b",
+        "Value": true,
+        "SourceTimestamp": "2020-11-30T07:21:30.2604024Z",
+        "StatusCode": 0
+    },
+    {
+        "NodeId": "ns=2;s=String\\69ff9a60-b6cd-4d6a",
+        "Value": "\\o/",
+        "SourceTimestamp": "2020-11-30T07:21:32.2604024Z",
+        "StatusCode": 0
+    }
+]
