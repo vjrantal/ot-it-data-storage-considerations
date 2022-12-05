@@ -2,6 +2,7 @@ from data_generator import generate_samples
 from datetime import datetime
 import os
 from writers import delta_writer, parquet_writer
+from readers import parquet_reader
 import timer
 
 # Generation configuration
@@ -18,6 +19,9 @@ parquet_output_root_directory = f"{root_output_directory}/parquet"
 # init writers
 delta_writer = delta_writer.DeltaWriter()
 parquet_writer = parquet_writer.ParquetWriter()
+
+# init readers
+parquet_reader = parquet_reader.ParquetReader()
 
 # init helpers
 stop_watch = timer.Timer()
@@ -50,6 +54,13 @@ def main():
   # delta_writer.convert(delta_df, partition_columns, delta_output_root_directory)
   # stop_watch.stop()
   # print("========= Finished Running Delta Writer Test =========")
+
+  print("\n\n")
+  print("========= Started Running Parquet Reader Test =========")
+  stop_watch.start()
+  parquet_reader.read(parquet_output_root_directory)
+  stop_watch.stop()
+  print("========= Finished Running Parquet Writer Test =========")
 
 if __name__ == "__main__":
   main()
